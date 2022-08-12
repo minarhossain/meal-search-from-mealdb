@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bona Nova', serif;
+}
+
+body {
+    background-color: rgb(244, 206, 136);
+}
+
+.main {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.heading {}
+
+.heading h1 {
+    font-size: 50px;
+    font-weight: 900;
+    margin: 20px 0;
+    letter-spacing: 1px;
+    padding-top: 2rem;
+
+}
+
+.searchBox {}
+
+.searchBar {
+    margin: 1rem;
+    width: 400px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    padding: .3rem 1rem;
+}
+
+.container {
+    width: 80%;
+    margin: 25px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 2rem;
+}
+
+.card {
+    width: 180px;
+    border-radius: 1rem;
+    background-color: #030e12;
+    padding: 5px;
+
+}
+
+.card img {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.card h3 {
+    color: white;
+    font-size: 18px;
+}
+
+.numBox {
+    width: 50px;
+    height: 40px;
+    background-color: rgb(18, 16, 16);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px 0 5px;
+}
+
+.indexContainer {
+    display: flex;
+    margin: 2.5rem 0;
+
+}

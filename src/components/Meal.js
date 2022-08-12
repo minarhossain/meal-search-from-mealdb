@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import MealItem from './MealItem';
 import RecipeIndex from './RecipeIndex';
 
@@ -11,31 +10,38 @@ const Meal = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => {
-
-                console.log(data.meals);
                 setItem(data.meals);
                 setShow(true);
-            });
-    }, [url])
+                console.log(data.meals)
+            })
+    }, [url]);
+
+    const setIndex = (alpha) => {
+        setUrl(`https://www.themealdb.com/api/json/v1/1/search.php?f=${alpha}`)
+    }
 
     return (
         <>
             <div className="main">
+
                 <div className="heading">
-                    <h2>Search Your Food Here!!</h2>
-                    <h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem, atque maxime! Ab magnam, eos repudiandae earum reprehenderit ullam dolorum recusandae ipsa quod perferendis pariatur aliquam!</h4>
+                    <h1>Search Here Food Recipe</h1>
+                    <h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam suscipit omnis nam rem expedita possimus aliquid tenetur labore delectus tempore.</h4>
                 </div>
                 <div className="searchBox">
-                    <input type="search" name="search" id="search" className="search-bar" />
+                    <input type="search" className="searchBar" id="" />
                 </div>
+
                 <div className="container">
+
                     {
                         show ? <MealItem data={item} /> : "Not Found"
                     }
                 </div>
                 <div className="indexContainer">
-                    <RecipeIndex />
+                    <RecipeIndex alphaIndex={(alpha) => setIndex(alpha)} />
                 </div>
+
             </div>
         </>
     );

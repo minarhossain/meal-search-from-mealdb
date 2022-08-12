@@ -1,13 +1,14 @@
-import logo from './logo.svg';
+
 import './App.css';
-import Meal from './component/Meal';
-import './component/style.css';
+import Meal from './components/Meal';
+import './components/style.css';
+
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Meal />
-    </div>
+    </>
   );
 }
 
